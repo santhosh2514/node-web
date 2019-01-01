@@ -44,6 +44,12 @@ app.get('/about',(req,res) => {
     pageTitle:'About page',
   });
 });
+app.get('/project',(req,res)=> {
+  res.render('project.hbs',{
+    pageTitle:'My projects',
+    user:'yogesh'
+  })
+})
 app.get('/bad',(req,res) =>{
   var errorMessage="the page is not available";
   res.send({
